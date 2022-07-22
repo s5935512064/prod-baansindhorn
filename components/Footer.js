@@ -122,7 +122,7 @@ const Footer = () => {
                                 </Link>
 
                             </div>
-                            <p className="text-xs font-light text-[#82603f] mt-1 sm:mb-0">More channel to follow us. </p>
+                            <p className="text-xs font-light text-[#82603f] mt-1 sm:mb-0">More channels to contact us. </p>
 
 
 
@@ -137,7 +137,7 @@ const Footer = () => {
 
 
                         <Link href={"https://siamsindhorn.com/privacy"}>
-                            <p className="text-xs font-light cursor-pointer text-[#82603f] sm:hidden pl-3">Privacy Policy</p>
+                            <a target="_blank" rel="noopener noreferrer" className="text-xs font-light cursor-pointer text-[#82603f] sm:hidden pl-3">Privacy Policy</a>
                         </Link>
 
 
@@ -152,7 +152,7 @@ const Footer = () => {
                         </button>
 
                         <Link href={"https://siamsindhorn.com/privacy"}>
-                            <p className="text-xs font-light underline cursor-pointer hidden sm:block">Privacy Policy</p>
+                            <a target="_blank" rel="noopener noreferrer" className="text-xs font-light underline cursor-pointer hidden sm:block">Privacy Policy</a>
                         </Link>
 
 

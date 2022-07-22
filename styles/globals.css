@@ -262,3 +262,17 @@
   background-color: #fff;
   transform: translateY(-7px) translateY(50%) rotate(45deg);
 }
+
+.border-img {
+  border: 20px solid transparent;
+  padding: 0px;
+  border-image: url("/assets/king2565/R10Border.svg") 15 stretch;
+}
+
+@media screen and (max-width: 768px) {
+  .border-img {
+    border: 20px solid transparent;
+    padding: 0px;
+    border-image: url("/assets/king2565/R10Border.svg") 10 stretch;
+  }
+}

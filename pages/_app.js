@@ -7,11 +7,11 @@ import Cookies from "../components/Cookies";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "@fancyapps/ui/dist/fancybox.css";
-
 import axios from 'axios';
 import Script from 'next/script'
 import { v4 as uuidv4 } from 'uuid';
 import Head from "next/head";
+import EventPopup from "../components/EventPopup";
 
 function MyApp({ Component, pageProps }) {
 
@@ -226,7 +226,7 @@ function MyApp({ Component, pageProps }) {
 
 
 
-
+      <EventPopup />
       <AnimatePresence
         exitBeforeEnter
         initial={false}
