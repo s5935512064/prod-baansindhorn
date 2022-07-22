@@ -1,0 +1,39 @@
+{
+  "name": "bannsindhorn.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^4.0.27",
+    "@headlessui/react": "^1.6.4",
+    "aos": "^2.3.4",
+    "axios": "^0.27.2",
+    "framer-motion": "^6.3.5",
+    "next": "12.1.6",
+    "next-auth": "^4.5.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-session": "^4.0.4",
+    "next-transpile-modules": "^9.0.0",
+    "node-fetch": "^3.2.5",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-google-recaptcha": "^2.1.0",
+    "sweetalert2": "^11.4.19",
+    "sweetalert2-react-content": "^5.0.1",
+    "uuid": "^8.3.2",
+    "vanilla-cookieconsent": "^2.8.0",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24"
+  }
+}
