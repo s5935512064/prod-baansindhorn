@@ -62,17 +62,17 @@ const EventPopup = ({ opened }) => {
 
                                         <div className="w-full h-full relative grid grid-cols-1 grid-rows-3 lg:grid-cols-2 lg:grid-rows-1 gap-3 mt-4 lg:mt-0">
 
-                                            <div className="bg-[url('/assets/king2565/R10.png')] bg-no-repeat bg-contain lg:bg-cover bg-center flex items-center justify-center h-full relative row-span-2 ">
+                                            <div className="bg-[url('/assets/king2565/R10.png')] bg-no-repeat bg-contain  bg-center flex items-center justify-center h-full relative row-span-2 ">
                                             </div>
 
-                                            <div className="h-full w-full relative justify-center grid grid-cols-1 justify-items-center  -mt-5   lg:grid-rows-2 items-end gap-3 lg:-translate-x-8 ">
+                                            <div className="h-full w-full relative justify-center grid grid-cols-1 justify-items-center   lg:grid-rows-2 items-end gap-3 lg:-translate-x-8 ">
 
-                                                <div className="w-full max-h-[250px] h-full relative bg-[url('/assets/king2565/R10Sign.png')] bg-no-repeat bg-center bg-contain hidden lg:block  translate-y-16 ">
+                                                <div className="w-full max-h-[250px] h-full relative bg-[url('/assets/king2565/R10Sign.png')] bg-no-repeat bg-center bg-contain hidden lg:block  translate-y-8 xxl:translate-y-16 ">
                                                 </div>
 
-                                                <div className="w-full h-full relative  ">
+                                                <div className="w-full h-full relative scale-75 hidden lg:block">
                                                     <Image
-                                                        src="/assets/king2565/R10Text.png"
+                                                        src="/assets/king2565/R10Text-desktop.png"
                                                         alt="text"
                                                         layout="fill"
                                                         objectFit="contain"
@@ -80,6 +80,18 @@ const EventPopup = ({ opened }) => {
 
                                                     />
                                                 </div>
+
+                                                <div className="w-full h-full relative  lg:hidden">
+                                                    <Image
+                                                        src="/assets/king2565/R10Text-m.png"
+                                                        alt="text"
+                                                        layout="fill"
+                                                        objectFit="contain"
+                                                        objectPosition={"center"}
+
+                                                    />
+                                                </div>
+
                                             </div>
 
 
