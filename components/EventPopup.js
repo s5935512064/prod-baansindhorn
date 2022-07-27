@@ -72,6 +72,7 @@ const EventPopup = ({ opened }) => {
 
                                                 <div className="w-full h-full relative scale-75 hidden lg:block">
                                                     <Image
+                                                        priority
                                                         src="/assets/king2565/R10Text-desktop.png"
                                                         alt="text"
                                                         layout="fill"
@@ -81,8 +82,9 @@ const EventPopup = ({ opened }) => {
                                                     />
                                                 </div>
 
-                                                <div className="w-full h-full relative  lg:hidden">
+                                                <div className="w-full h-full relative scale-90 -translate-y-4 lg:hidden">
                                                     <Image
+                                                        priority
                                                         src="/assets/king2565/R10Text-m.png"
                                                         alt="text"
                                                         layout="fill"
