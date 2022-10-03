@@ -10,7 +10,7 @@ import { useRouter } from 'next/router'
 import Script from 'next/script'
 import axios from "axios";
 import Swal from 'sweetalert2'
-// import { useSearchParams } from "react-router-dom";
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -34,7 +34,6 @@ const Index = () => {
     const [message, setMessage] = useState("");
     const [ipAddress, setIpAddress] = useState("")
     const recaptchaRef = useRef();
-    const [fromQR, setFromQR] = useState(false)
 
 
 
@@ -78,15 +77,7 @@ const Index = () => {
 
                     }).then((result) => {
                         /* Read more about handling dismissals below */
-
-                        if (fromQR) {
-
-                            router.push("/files/Baan Sindhorn - Brochure (Execution Copy).pdf")
-                        } else {
-                            router.push("/register/success")
-                        }
-
-
+                        router.push("/register/success")
                     })
 
                 }
@@ -113,20 +104,6 @@ const Index = () => {
         });
     }, [])
 
-
-    useEffect(() => {
-
-        async function chckFromQr() {
-            if (query.QrCode != undefined) {
-                setFromQR(true)
-            } else {
-                setFromQR(false)
-            }
-        }
-
-        chckFromQr()
-
-    })
 
 
     return (
