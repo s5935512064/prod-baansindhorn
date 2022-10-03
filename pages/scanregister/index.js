@@ -68,7 +68,7 @@ const Index = () => {
 
                     }).then((result) => {
                         /* Read more about handling dismissals below */
-                        router.push("/files/Baan Sindhorn - Brochure (Execution Copy).pdf")
+                        router.push("/scanregister/success")
                     })
 
                 }
