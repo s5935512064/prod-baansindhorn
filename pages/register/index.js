@@ -10,7 +10,7 @@ import { useRouter } from 'next/router'
 import Script from 'next/script'
 import axios from "axios";
 import Swal from 'sweetalert2'
-
+// import { useSearchParams } from "react-router-dom";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -22,7 +22,8 @@ let URL = process.env.NEXT_PUBLIC_URL + "/api-register/?select=senddata";
 
 const Index = () => {
 
-
+    // let [searchParams, setSearchParams] = useSearchParams();
+    const { query } = useRouter();
     const router = useRouter();
     const [name, setName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -33,9 +34,17 @@ const Index = () => {
     const [message, setMessage] = useState("");
     const [ipAddress, setIpAddress] = useState("")
     const recaptchaRef = useRef();
+    const [fromQR, setFromQR] = useState(false)
 
 
 
+    // const chckFromQr = async () => {
+    //     if(query.QrCode != undefined) {
+    //         return setFromQR(true)
+    //     } else {
+    //         return setFromQR(false)
+    //     }
+    // }
 
     const handleSubmit = async (event) => {
 
@@ -60,7 +69,6 @@ const Index = () => {
         await axios.post(URL, formData)
             .then((response) => {
                 if (response.status == 200) {
-
                     Swal.fire({
                         icon: 'success',
                         title: 'Successfully!',
@@ -71,7 +79,13 @@ const Index = () => {
                     }).then((result) => {
                         /* Read more about handling dismissals below */
 
-                        router.push("/register/success")
+                        if (fromQR) {
+
+                            router.push("/files/Baan Sindhorn - Brochure (Execution Copy).pdf")
+                        } else {
+                            router.push("/register/success")
+                        }
+
 
                     })
 
@@ -83,12 +97,11 @@ const Index = () => {
 
 
     const recaptcha_callback = async (captchaCode) => {
-        // If the reCAPTCHA code is null or undefined indicating that
-        // the reCAPTCHA was expired then return early
+
         if (!captchaCode) {
             return;
         }
-        // document.getElementById("registerButton").disabled = false;
+
         await recaptchaRef.current.reset();
 
     }
@@ -99,6 +112,21 @@ const Index = () => {
             setIpAddress(response.data.ipAddress)
         });
     }, [])
+
+
+    useEffect(() => {
+
+        async function chckFromQr() {
+            if (query.QrCode != undefined) {
+                setFromQR(true)
+            } else {
+                setFromQR(false)
+            }
+        }
+
+        chckFromQr()
+
+    })
 
 
     return (
@@ -130,16 +158,7 @@ const Index = () => {
                         <p className="text-[#7b7c80] font-serif italic text-center">Successful registration will entitle
                             to avail of the special privileges.</p>
                         <div className="w-full h-full grid grid-cols-1 gap-5 py-9 justify-items-center">
-                            {/* <div className="w-full h-[350px] md:h-[575px] relative">
-                                <Image
-                                    src="/assets/banner-register.webp"
-                                    alt="register"
-                                    layout="fill"
 
-                                    objectFit="contain"
-                                />
-
-                            </div> */}
 
                             <div className="max-w-lg w-full">
                                 <form onSubmit={handleSubmit}>
@@ -147,40 +166,30 @@ const Index = () => {
 
                                     <div className='md:px-4 pt-6 grid grid-cols-1  gap-1'>
                                         <div className="mb-2">
-                                            {/* <label className="block text-[#B6A694]  mb-2" htmlFor="name">
-                                                First Name
-                                            </label> */}
+
                                             <input
                                                 onChange={(e) => setName(e.target.value)}
                                                 className="font-light text-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Name" required />
                                         </div>
                                         <div className="mb-2">
-                                            {/* <label className="block text-[#B6A694]  mb-2" htmlFor="Lname">
-                                                Last Name
-                                            </label> */}
+
                                             <input
                                                 onChange={(e) => setLastName(e.target.value)}
                                                 className="font-light text-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Lname" type="text" placeholder="Lastname" required />
                                         </div>
 
                                         <div className="mb-2">
-                                            {/* <label className="block text-[#B6A694]  mb-2" htmlFor="email">
-                                                Email
-                                            </label> */}
+
                                             <input onChange={(e) => setEmail(e.target.value)} className="font-light text-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" required />
                                         </div>
                                         <div className="mb-2">
-                                            {/* <label className="block text-[#B6A694] mb-2" htmlFor="phone">
-                                                Phone Number
-                                            </label> */}
+
                                             <input
                                                 onChange={(e) => setPhone(e.target.value)}
                                                 className="font-light text-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Phone number" />
                                         </div>
                                         <div className="mb-2">
-                                            {/* <label className="block text-[#B6A694]   mb-2" htmlFor="typeUnit">
-                                                Unit Type
-                                            </label> */}
+
                                             <div className="relative">
                                                 <select
                                                     onChange={(e) => setType(e.target.value)}
@@ -200,9 +209,7 @@ const Index = () => {
                                         </div>
 
                                         <div className="mb-2">
-                                            {/* <label className="block text-[#B6A694]  mb-2" htmlFor="price">
-                                                Price
-                                            </label> */}
+
                                             <div className="relative">
                                                 <select
                                                     onChange={(e) => setPrice(e.target.value)}
@@ -222,24 +229,14 @@ const Index = () => {
                                         </div>
 
                                         <div className="mb-2 ">
-                                            {/* <label className="block text-[#B6A694]  mb-2" htmlFor="message">
-                                                Message
-                                            </label> */}
+
                                             <textarea
                                                 onChange={(e) => setMessage(e.target.value)}
                                                 className="font-light text-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" type="text" placeholder="Message" />
                                         </div>
 
                                         <div className="mb-2 ">
-                                            {/* <label className="block text-[#B6A694] mb-1" htmlFor="message">
-                                                Privacy Policy
-                                            </label>
-                                            <p className="text-gray-700 text-[13px] mb-1 font-light ">
-                                                Siam Sindhorn Co., Ltd. and its group companies (&quot;Company&quot;) collect, use, or disclose your Personal Data for the purpose of communication, public relations, or offering products and services with you in accordance with our Privacy Policy.  In addition, Company also provides appropriate security measures to protect your privacy.
-                                            </p>
-                                            <p className="text-gray-700 text-[13px] mb-4 font-light">
-                                                You can access our Privacy Policy by clicking <Link href="https://siamsindhorn.com/privacy"><span className="text-[#B6A694]">here.</span></Link>
-                                            </p> */}
+
                                             <div className="text-gray-700 text-[13px] font-light">
                                                 <input id="policy" type="checkbox" className="mr-2" />
                                                 <label htmlFor="policy">

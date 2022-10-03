@@ -276,3 +276,23 @@
     border-image: url("/assets/king2565/R10Border.svg") 10 stretch;
   }
 }
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #704a25 0%,
+
+    #815b36 100%
+  );
+
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
