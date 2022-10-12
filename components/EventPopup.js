@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const EventPopup = ({ opened }) => {
 
-    let [isOpen, setIsOpen] = useState(false)
+    let [isOpen, setIsOpen] = useState(true)
 
     function closeModal() {
         setIsOpen(false)
@@ -47,7 +47,9 @@ const EventPopup = ({ opened }) => {
                                 leaveTo="opacity-0 scale-95"
                             >
 
-                                <Dialog.Panel className="transform  p-4 text-left align-middle transition-all max-w-7xl w-full bg-[url('/assets/king2565/R10BG.svg')] bg-no-repeat bg-cover bg-center h-[55vh] sm:h-[65vh] lg:h-[80vh] relative">
+                                <Dialog.Panel className="transform  p-4 text-left align-middle transition-all max-w-7xl w-full bg-[url('/assets/king2565/15027983_02.jpg')] lg:bg-[url('/assets/king2565/RAMABG.jpg')] bg-no-repeat bg-cover bg-top h-[55vh] sm:h-[65vh] lg:h-[80vh] relative ">
+                                    <div className="absolute bottom-0 h-1/2 bg-gradient-to-t from-white z-0 w-full left-0" />
+
                                     <div className=" absolute -top-7 -right-1">
                                         <button onClick={closeModal} className="z-50 border-none outline-none">
                                             <svg className="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 18 18">
@@ -57,35 +59,37 @@ const EventPopup = ({ opened }) => {
 
                                     </div>
 
-                                    <div className="w-full h-full border-img relative">
-                                        <div className="w-24 h-24 bg-[url('/assets/king2565/R10Sign.png')] bg-contain bg-no-repeat bg-right absolute top-0 right-0 lg:hidden" />
+                                    <div className="w-full h-full relative">
+                                        {/* <span className="sr-only border-img">class-border</span> */}
+
+                                        {/* <div className="w-24 h-24 bg-[url('/assets/king2565/R10Sign.png')] bg-contain bg-no-repeat bg-right absolute top-0 right-0 lg:hidden" /> */}
 
                                         <div className="w-full h-full relative grid grid-cols-1 grid-rows-3 lg:grid-cols-2 lg:grid-rows-1 gap-3 mt-4 lg:mt-0">
 
-                                            <div className="bg-[url('/assets/king2565/R10.png')] bg-no-repeat bg-contain  bg-center flex items-center justify-center h-full relative row-span-2 ">
+                                            <div className="bg-[url('/assets/king2565/R10.png')] bg-no-repeat bg-contain  bg-center flex items-center justify-center h-full relative row-span-2 opacity-0">
                                             </div>
 
-                                            <div className="h-full w-full relative justify-center grid grid-cols-1 justify-items-center   lg:grid-rows-2 items-end gap-3 lg:-translate-x-8 ">
+                                            <div className="h-full w-full relative justify-center grid grid-cols-1 justify-items-center lg:grid-rows-2 items-end gap-3 lg:-translate-x-8 ">
 
-                                                <div className="w-full max-h-[250px] h-full relative bg-[url('/assets/king2565/R10Sign.png')] bg-no-repeat bg-center bg-contain hidden lg:block  translate-y-8 xxl:translate-y-16 ">
-                                                </div>
+                                                {/* <div className="w-full max-h-[250px] h-full relative bg-[url('/assets/king2565/R10Sign.png')] bg-no-repeat bg-center bg-contain hidden lg:block  translate-y-8 xxl:translate-y-16 ">
+                                                </div> */}
 
-                                                <div className="w-full h-full relative scale-75 hidden lg:block">
+                                                <div className="w-full h-full relative scale-90 hidden lg:block translate-y-44 ">
                                                     <Image
                                                         priority
-                                                        src="/assets/king2565/R10Text-desktop.png"
+                                                        src="/assets/king2565/TEXT_SSD.png"
                                                         alt="text"
                                                         layout="fill"
                                                         objectFit="contain"
-                                                        objectPosition={"center"}
+                                                        objectPosition={"right"}
 
                                                     />
                                                 </div>
 
-                                                <div className="w-full h-full relative scale-90 -translate-y-4 lg:hidden">
+                                                <div className="w-full h-full relative scale-110 -translate-y-6 lg:hidden">
                                                     <Image
                                                         priority
-                                                        src="/assets/king2565/R10Text-m.png"
+                                                        src="/assets/king2565/TEXT_SSD.png"
                                                         alt="text"
                                                         layout="fill"
                                                         objectFit="contain"
