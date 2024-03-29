@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const EventPopup = ({ opened }) => {
 
-  let [isOpen, setIsOpen] = useState(false)
+  let [isOpen, setIsOpen] = useState(true)
 
   function closeModal() {
     setIsOpen(false)
@@ -90,7 +90,7 @@ const EventPopup = ({ opened }) => {
                           />
                         </div>
 
-                        <div className="w-full h-full  relative  -translate-y-5 lg:hidden ">
+                        <div className="w-full h-full  relative  -translate-y-10 lg:hidden ">
                           <Image
                             priority={true}
                             src="/assets/king2565/04_text.webp"
@@ -98,7 +98,7 @@ const EventPopup = ({ opened }) => {
                             layout="fill"
                             objectFit="contain"
                             objectPosition="center"
-                            className="scale-125"
+                            className=""
                           />
                         </div>
                       </div>
