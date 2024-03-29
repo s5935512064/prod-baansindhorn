@@ -70,7 +70,7 @@ export default function Home() {
           <meta name="application-name" content="Baan Sindhorn" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
-          <link rel="icon" href="/favicon.svg" />
+          <link rel="icon" type="image/x-icon" href="/favicon.svg" />
         </Head>
 
         <div className="min-h-screen w-full h-full relative flex flex-col justify-center items-center gap-5">

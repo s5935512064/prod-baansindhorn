@@ -56,7 +56,7 @@ const Contact = () => {
                     <meta name="application-name" content="Baan Sindhorn" />
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff" />
-                    <link rel="icon" href="/favicon.svg" />
+                    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
                 </Head>
                 <div className="w-full min-h-[85vh] h-full  flex flex-col justify-center items-center bg-white">
                     <div className="max-w-7xl w-full h-auto  mt-28  2xl:mt-20 md:border border-[#82603f]">

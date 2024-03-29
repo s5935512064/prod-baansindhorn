@@ -22,7 +22,7 @@ const Cookiepolicy = () => {
                     <meta name="application-name" content="Baan Sindhorn" />
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff" />
-                    <link rel="icon" href="/favicon.svg" />
+                    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
                 </Head>
                 <div className="min-h-screen w-full h-full relative flex justify-center pt-28">
                     <div className="max-w-5xl w-full h-full relative px-6 md:px-10  mb-16 text-[#7b7c80] ">

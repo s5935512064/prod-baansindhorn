@@ -114,7 +114,7 @@ const Index = () => {
                     <meta name="application-name" content="Baan Sindhorn" />
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff" />
-                    <link rel="icon" href="/favicon.svg" />
+                    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
                 </Head>
 
                 <Script src="https://www.google.com/recaptcha/api.js" />

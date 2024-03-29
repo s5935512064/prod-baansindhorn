@@ -1,48 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+    <loc>https://baansindhorn.com/contact</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/cookiepolicy</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/facilities</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/floorplan</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/gallery</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/project-detail</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/qrregister</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/residence</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/register/index</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/scanregister/[success]</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/scanregister/index</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/register/[id]/index</loc>
+    <lastmod>2024-01-08T09:04:22.841Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-
-<url>
-  <loc>https://baansindhorn.com/</loc>
-  <lastmod>2022-06-17T10:51:29+00:00</lastmod>
-</url>
-<url>
-  <loc>https://baansindhorn.com/facilities/</loc>
-  <lastmod>2022-06-17T10:51:29+00:00</lastmod>
-</url>
-<url>
-  <loc>https://baansindhorn.com/project-detail/</loc>
-  <lastmod>2022-06-17T10:51:29+00:00</lastmod>
-</url>
-<url>
-  <loc>https://baansindhorn.com/floorplan/</loc>
-  <lastmod>2022-06-17T10:51:29+00:00</lastmod>
-</url>
-<url>
-  <loc>https://baansindhorn.com/gallery/</loc>
-  <lastmod>2022-06-17T10:51:29+00:00</lastmod>
-</url>
-<url>
-  <loc>https://baansindhorn.com/contact/</loc>
-  <lastmod>2022-06-17T10:51:29+00:00</lastmod>
-</url>
-<url>
-  <loc>https://baansindhorn.com/cookiepolicy/</loc>
-  <lastmod>2022-06-17T10:51:29+00:00</lastmod>
-</url>
-<url>
-  <loc>https://baansindhorn.com/enquiry/</loc>
-  <lastmod>2022-06-17T10:51:29+00:00</lastmod>
-</url>
-<url>
-  <loc>https://baansindhorn.com/enquiry/success/</loc>
-  <lastmod>2022-06-17T10:51:29+00:00</lastmod>
-</url>
-
-
-</urlset>
+  </urlset>

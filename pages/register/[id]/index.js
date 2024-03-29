@@ -67,7 +67,7 @@ const Success = () => {
                     <meta name="application-name" content="Baan Sindhorn" />
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff" />
-                    <link rel="icon" href="/favicon.svg" />
+                    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
                 </Head>
 
                 <div className="w-full min-h-[85vh]  h-full  flex justify-center relative bg-white">

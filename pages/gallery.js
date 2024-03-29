@@ -179,7 +179,7 @@ const Gallery = () => {
                     <meta name="application-name" content="Baan Sindhorn" />
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff" />
-                    <link rel="icon" href="/favicon.svg" />
+                    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
                 </Head>
                 <div className="w-full min-h-[85vh] h-full  flex justify-center relative bg-white ">
                     <div className="max-w-7xl w-full h-full mt-28 relative px-6 md:px-10">
