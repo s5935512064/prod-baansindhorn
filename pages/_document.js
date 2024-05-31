@@ -10,7 +10,6 @@ export default class MyDocument extends Document {
 
                 <Head>
 
-
                     {/* Global Site Tag (gtag.js) - Google Analytics */}
                     <script
                         type="text/plain"
@@ -32,6 +31,8 @@ export default class MyDocument extends Document {
           `,
                         }}
                     />
+
+                    <meta name="google-site-verification" content="w9MKYYDkDRZqyCAI3-w3rEjhbISHdUfx7RvYfF0buIg" />
                 </Head>
                 <body>
 

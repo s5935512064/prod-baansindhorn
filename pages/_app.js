@@ -1,34 +1,34 @@
-import '../styles/globals.css'
-import "../styles/cookieconsent.css";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
-import Cookies from "../components/Cookies";
+import Cookies99 from "../components/Cookies";
 import AOS from "aos";
+import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
+import Cookies from 'js-cookie'
+
+import '../styles/globals.css'
+import "../styles/cookieconsent.css";
 import "aos/dist/aos.css";
 import "@fancyapps/ui/dist/fancybox.css";
-import axios from 'axios';
-import Script from 'next/script'
-import { v4 as uuidv4 } from 'uuid';
-import Head from "next/head";
-import EventPopup from "../components/EventPopup";
 
 function MyApp({ Component, pageProps }) {
 
   const { pathname } = useRouter();
   const [data, setData] = useState(null);
-
   const router = useRouter();
-
+  const firstVisitCookie = Cookies.get('firstVisit_bsd')
 
   useEffect(() => {
+    if (!firstVisitCookie) {
+      const expirationDate = new Date(new Date().getTime() + 12 * 60 * 60 * 1000);
+      Cookies.set('firstVisit_bsd', 'true', { expires: expirationDate });
+      router.push('/welcome')
+    }
+  }, [])
 
-    // router.events.on('routeChangeStart', clearEventListener)
-    // some browsers (like safari) may require a timeout to delay calling this
-    // function after a page has loaded; otherwise, it may not update the position
-
+  useEffect(() => {
     window.scrollTo(0, 0);
-
   }, [pathname]);
 
 
@@ -40,12 +40,21 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   useEffect(() => {
+    const fetchIP = async () => {
+      try {
+        const response = await axios.get("https://api.ipify.org?format=json");
+        if (response.status != 200) {
+          throw new Error("Network response was not ok");
+        }
+        setData(response.data.ip);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchIP();
+  }, []);
 
-    if (data == null) {
-      const cookiesIP = axios.get('https://api.db-ip.com/v2/free/self').then(response => {
-        setData(response.data)
-      });
-    }
+  useEffect(() => {
 
     if (data != null) {
       import('vanilla-cookieconsent/dist/cookieconsent.js').then(() => {
@@ -78,7 +87,7 @@ function MyApp({ Component, pageProps }) {
           },
 
           onAccept: function (cookie, user_preferences) {
-            cc.set('data', { value: { ipAddress: data.ipAddress, country: data.countryName, prov: data.stateProv, UUID: uuidv4() } })
+            cc.set('data', { value: { ipAddress: data.ip, UUID: uuidv4() } })
 
             // if (cc.allowedCategory('analytics')) {
 
@@ -191,7 +200,7 @@ function MyApp({ Component, pageProps }) {
 
       });
     }
-  })
+  }, [data])
 
 
 
@@ -199,43 +208,15 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
 
-
-      {/* <Script
-        id="gtag"
-        strategy="afterInteractive"
-        dataCookiecategory="analytics"
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-
-      <Script
-        id="ga"
-        dataCookiecategory="analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      /> */}
-
-
-
-      <EventPopup />
       <AnimatePresence
-        exitBeforeEnter
+        mode="wait"
         initial={false}
       >
 
         <Component {...pageProps} />
 
       </AnimatePresence>
-      <Cookies />
+      <Cookies99 />
     </>
 
   );

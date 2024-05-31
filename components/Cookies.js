@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
-const Cookies = () => {
+const Cookies99 = () => {
 
     return (
         <>
@@ -25,4 +25,4 @@ const Cookies = () => {
     );
 }
 
-export default Cookies;
+export default Cookies99;

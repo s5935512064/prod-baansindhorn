@@ -1,80 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-    <loc>undefined/contact</loc>
-    <lastmod>2024-03-29T10:35:43.070Z</lastmod>
+    <loc>https://baansindhorn.com/contact</loc>
+    <lastmod>2024-05-31T03:57:36.603Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined/cookiepolicy</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com/cookiepolicy</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined/facilities</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com/facilities</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined/floorplan</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com/floorplan</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined/gallery</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com/gallery</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined/project-detail</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com/project-detail</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined/qrregister</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com/qrregister</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined/residence</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com/residence</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined/register/index</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com/welcome</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined/scanregister/index</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com/register/index</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined/scanregister/[success]</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com/scanregister/index</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>undefined/register/[id]/index</loc>
-    <lastmod>2024-03-29T10:35:43.074Z</lastmod>
+    <loc>https://baansindhorn.com/scanregister/[success]</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baansindhorn.com/register/[id]/index</loc>
+    <lastmod>2024-05-31T03:57:36.604Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
