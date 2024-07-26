@@ -17,15 +17,6 @@ function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
   const [data, setData] = useState(null);
   const router = useRouter();
-  const firstVisitCookie = Cookies.get('firstVisit_bsd')
-
-  useEffect(() => {
-    if (!firstVisitCookie) {
-      const expirationDate = new Date(new Date().getTime() + 12 * 60 * 60 * 1000);
-      Cookies.set('firstVisit_bsd', 'true', { expires: expirationDate });
-      router.push('/welcome')
-    }
-  }, [])
 
   useEffect(() => {
     window.scrollTo(0, 0);

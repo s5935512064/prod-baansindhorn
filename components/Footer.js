@@ -14,7 +14,7 @@ const Footer = () => {
     }
     return (
         <>
-            <div className="w-full h-full flex justify-center items-center my-4 mt-10">
+            <footer className="w-full h-full flex justify-center items-center my-4 mt-10">
                 <div className="max-w-7xl w-full h-full px-4 py-2">
                     <div className=" h-1/2 items-end flex  mb-1  divide-x divide-[#b6a694] gap-2">
                         <div className="flex h-full  flex-col sm:flex-row-reverse sm:mb-1 sm:items-center w-fit ">
@@ -160,7 +160,7 @@ const Footer = () => {
                     </div>
 
                 </div>
-            </div>
+            </footer>
             <Transition appear show={isOpen} as={Fragment}>
                 <Dialog as="div" className="relative z-50" onClose={closeModal}>
                     <Transition.Child

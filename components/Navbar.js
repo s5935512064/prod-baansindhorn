@@ -56,7 +56,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="w-full overflow-hidden relative h-full ">
+        <header className="w-full overflow-hidden relative h-full ">
             <div id="navbar" className={classNames(navbarOffset ? "bg-white/80 backdrop-blur" : "bg-transparent", "fixed top-0 w-full h-[70px] sm:h-24  z-10 ")}
             />
             <Link href={"/"}>
@@ -142,7 +142,7 @@ const Navbar = () => {
                 </div>
             </Link>
 
-        </div>
+        </header>
     );
 }
 

@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Cookies from "./Cookies";
 import { motion, AnimatePresence } from "framer-motion";
-
+import EventPopup from "./EventPopup";
 
 const variants = {
     hidden: { opacity: 0, x: 0, y: 0 },
@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
 
     return (
         <>
+            <EventPopup />
             <Navbar />
             <motion.main
                 variants={variants} // Pass the variant object into Framer Motion

@@ -17,8 +17,11 @@ const withTM = require("next-transpile-modules")(["@fancyapps/ui", "vanilla-cook
 
 const nextConfig = {
   reactStrictMode: true,
+  env: {
+    NEXT_BEARER_TOKEN: process.env.NEXT_BEARER_TOKEN
+  },
   images: {
-    domains: ['scontent-kut2-2.xx.fbcdn.net', 'scontent.fbkk10-1.fna.fbcdn.net', "scontent-kut2-1.xx.fbcdn.net", "scontent.fbkk14-1.fna.fbcdn.net", "https://baansindhorn.com/"],
+    domains: ['scontent-kut2-2.xx.fbcdn.net', 'scontent.fbkk10-1.fna.fbcdn.net', "scontent-kut2-1.xx.fbcdn.net", "scontent.fbkk14-1.fna.fbcdn.net", 'res.cloudinary.com', "https://baansindhorn.com/"],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 600,
     unoptimized: true,
