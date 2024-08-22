@@ -72,10 +72,7 @@ const Navbar = () => {
 
 
             <div className="fixed top-0 right-0 w-fit h-[70px] sm:h-24 flex justify-end px-4 md:px-10 z-30 ">
-                <div className="inline-flex relative h-full items-center gap-3 w-full ">
-
-
-
+                <div className="inline-flex relative h-full items-center translate-x-4 gap-3 w-full ">
                     <button id="menuBtn" type="button" onClick={ToggleSidebar} className={classNames(
                         menuBar ? "text-white border-white" :
                             (!navbarOffset ? (router.pathname === "/" || router.pathname === "/facilities" ? "text-[#83603f] border-[#83603f] border-opacity-0" : "text-[#83603f] border-[#83603f] border-opacity-0") : "text-[#83603f] border-[#83603f] border-opacity-0"), "w-28 h-10 text-sm  rounded-full duration-300 text-center ")}>

@@ -76,7 +76,7 @@ const EventPopup = ({ opened }) => {
                 >
                   <button
                     type="button"
-                    className="size-7 md:size-10 bg-white text-black rounded-full absolute right-4 top-4 flex justify-center items-center"
+                    className="size-7 md:size-10 bg-white text-black rounded-full absolute right-4 top-4 flex justify-center items-center z-20 outline-none"
                     onClick={closeModal}
                   >
                     <svg
@@ -96,7 +96,7 @@ const EventPopup = ({ opened }) => {
                   </button>
 
                   <div className="w-full !h-full z-10 grid grid-cols-1 grid-rows-3 md:grid-rows-1 md:grid-cols-2 md:gap-2 xl:gap-4 justify-items-center md:-translate-y-4">
-                    <div className="min-w-[400px] h-full flex  relative !row-span-2 md:row-span-1 -mt-4 md:mt-0 ">
+                    <div className="w-full h-full flex  relative !row-span-2 md:row-span-1 -mt-4 md:mt-0 ">
                       <Image
                         src={data.profileImg}
                         alt="profile"
@@ -105,9 +105,9 @@ const EventPopup = ({ opened }) => {
                         width={0}
                         height={0}
                         layout="fill"
-                        className="w-full h-full object-contain object-center absolute inset-0 scale-75 md:scale-100 drop-shadow-md "
+                        className="w-full h-full object-contain object-center absolute inset-0 scale-75 md:scale-90 drop-shadow-md "
                       />
-                      <div className="size-24 md:size-32 absolute top-0 left-2  md:hidden     ">
+                      <div className="size-24 md:size-32 absolute top-0 -left-2  md:hidden     ">
                         <Image
                           src={data.signImg}
                           alt="sign"
@@ -141,7 +141,7 @@ const EventPopup = ({ opened }) => {
                         {data.text1.replace(new RegExp("\r?\n", "g"), "<br />")}
                       </p>
 
-                      <div className="flex flex-col md:gap-2 ">
+                      <div className="flex flex-col ">
                         <p
                           className={` text-center !whitespace-pre-line text-3xl md:text-4xl xl:text-5xl font-semibold drop-shadow-sm`}
                         >
@@ -151,7 +151,7 @@ const EventPopup = ({ opened }) => {
                           )}
                         </p>
 
-                        <div className="w-full h-10  relative">
+                        <div className="w-full h-8  relative">
                           <Image
                             src={
                               "https://res.cloudinary.com/dndcgytjh/image/upload/fl_preserve_transparency/v1721820504/divide_royal_plj7op.jpg?_s=public-apps"
