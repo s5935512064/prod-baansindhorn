@@ -163,7 +163,7 @@ const Gallery = () => {
         }
     })
     return (
-        <AnimatePresence>
+        <>
             <Layout>
                 <Head>
                     <title>Baan Sindhorn</title>
@@ -435,7 +435,7 @@ const Gallery = () => {
                     </div>
                 </div>
             </Layout>
-        </AnimatePresence>
+        </>
     );
 }
 

@@ -49,7 +49,7 @@ const Success = () => {
     // }, [])
 
     return (
-        <AnimatePresence>
+        <>
             <>
 
                 <Head>
@@ -99,7 +99,7 @@ const Success = () => {
                 </div>
             </>
 
-        </AnimatePresence>
+        </>
     );
 }
 

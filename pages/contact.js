@@ -40,7 +40,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <AnimatePresence>
+        <>
             <Layout>
                 <Head>
                     <title>Baan Sindhorn</title>
@@ -168,7 +168,7 @@ const Contact = () => {
 
                 </div>
             </Layout>
-        </AnimatePresence>
+        </>
     );
 }
 

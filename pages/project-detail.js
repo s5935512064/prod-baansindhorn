@@ -1203,7 +1203,7 @@ const ProjectDetail = () => {
     }
 
     return (
-        <AnimatePresence>
+        <>
             <Layout>
                 <Head>
                     <title>Baan Sindhorn</title>
@@ -1233,7 +1233,7 @@ const ProjectDetail = () => {
                     }
                 </div>
             </Layout>
-        </AnimatePresence>
+        </>
     );
 }
 

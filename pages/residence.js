@@ -700,7 +700,7 @@ const Residence = () => {
     }
 
     return (
-        <AnimatePresence>
+        <>
             <Layout>
                 <Head>
                     <title>Baan Sindhorn</title>
@@ -730,7 +730,7 @@ const Residence = () => {
                     }
                 </div>
             </Layout>
-        </AnimatePresence>
+        </>
     );
 }
 

@@ -22,7 +22,7 @@ let URL = process.env.NEXT_PUBLIC_URL + "/api-register/?select=senddata";
 
 const Index = () => {
 
-    // let [searchParams, setSearchParams] = useSearchParams();
+    // // let [searchParams, setSearchParams] = useSearchParams();
     const { query } = useRouter();
     const router = useRouter();
     const [name, setName] = useState("");
@@ -34,16 +34,13 @@ const Index = () => {
     const [message, setMessage] = useState("");
     const [ipAddress, setIpAddress] = useState("")
     const recaptchaRef = useRef();
-
-
-
-    // const chckFromQr = async () => {
-    //     if(query.QrCode != undefined) {
-    //         return setFromQR(true)
-    //     } else {
-    //         return setFromQR(false)
-    //     }
-    // }
+    const chckFromQr = async () => {
+        if (query.QrCode != undefined) {
+            return setFromQR(true)
+        } else {
+            return setFromQR(false)
+        }
+    }
 
     const handleSubmit = async (event) => {
 
@@ -99,35 +96,43 @@ const Index = () => {
 
 
     useEffect(() => {
-        const cookiesIP = axios.get('https://api.db-ip.com/v2/free/self').then(response => {
-            setIpAddress(response.data.ipAddress)
-        });
+        getIP()
+        async function getIP() {
+            try {
+                const res = await axios.get('https://api.ipify.org?format=json')
+                if (res.status == 200 & res.data) {
+                    setIpAddress(res.data.ip)
+                }
+            } catch (e) {
+                console.log(e)
+            }
+        }
     }, [])
 
 
 
     return (
-        <AnimatePresence>
+        <>
+            <Head>
+                <title>Baan Sindhorn</title>
+                <meta name="description" content="Find 7 properties from 2 to 2 bed  units for Sale &amp; Rent available at Baan Sindhorn, Pathum Wan,  Bangkok" />
+                <meta content="22 ยูนิตสำหรับขาย และ 10 ยูนิตสำหรับเช่าที่ Baan Sindhorn (บ้านสินธร) ราคาตลาดเฉลี่ย คือ 0 บาท/ตรม. แนวโน้มราคา: คงที่" name="description" />
+                <meta content="บ้านสินธร,คอนโดมิเนียม,ปทุมวัน,กรุงเทพฯ" name="keywords" />
+                <meta content="//https://baansindhorn.com/" property="og:url" />
+                <meta content="Baan Sindhorn (บ้านสินธร)" property="og:title" />
+
+                <meta content="22 ยูนิตสำหรับขาย และ 10 ยูนิตสำหรับเช่าที่ Baan Sindhorn (บ้านสินธร)
+ราคาตลาดเฉลี่ย คือ 0 บาท/ตรม. แนวโน้มราคา: คงที่" property="og:description" />
+                <meta name="apple-mobile-web-app-title" content="Baan Sindhorn" />
+                <meta name="application-name" content="Baan Sindhorn" />
+                <meta name="msapplication-TileColor" content="#da532c" />
+                <meta name="theme-color" content="#ffffff" />
+                <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+            </Head>
+
+            <Script src="https://www.google.com/recaptcha/api.js" />
             <Layout>
 
-                <Head>
-                    <title>Baan Sindhorn</title>
-                    <meta name="description" content="Find 7 properties from 2 to 2 bed  units for Sale &amp; Rent available at Baan Sindhorn, Pathum Wan,  Bangkok" />
-                    <meta content="22 ยูนิตสำหรับขาย และ 10 ยูนิตสำหรับเช่าที่ Baan Sindhorn (บ้านสินธร) ราคาตลาดเฉลี่ย คือ 0 บาท/ตรม. แนวโน้มราคา: คงที่" name="description" />
-                    <meta content="บ้านสินธร,คอนโดมิเนียม,ปทุมวัน,กรุงเทพฯ" name="keywords" />
-                    <meta content="//https://baansindhorn.com/" property="og:url" />
-                    <meta content="Baan Sindhorn (บ้านสินธร)" property="og:title" />
-
-                    <meta content="22 ยูนิตสำหรับขาย และ 10 ยูนิตสำหรับเช่าที่ Baan Sindhorn (บ้านสินธร)
-ราคาตลาดเฉลี่ย คือ 0 บาท/ตรม. แนวโน้มราคา: คงที่" property="og:description" />
-                    <meta name="apple-mobile-web-app-title" content="Baan Sindhorn" />
-                    <meta name="application-name" content="Baan Sindhorn" />
-                    <meta name="msapplication-TileColor" content="#da532c" />
-                    <meta name="theme-color" content="#ffffff" />
-                    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
-                </Head>
-
-                <Script src="https://www.google.com/recaptcha/api.js" />
 
                 <div className="w-full min-h-[85vh]  h-full  flex justify-center relative bg-white">
                     <div className="max-w-7xl w-full h-full mt-28 relative px-6 md:px-10">
@@ -240,7 +245,7 @@ const Index = () => {
                 </div>
             </Layout>
 
-        </AnimatePresence>
+        </>
     );
 }
 

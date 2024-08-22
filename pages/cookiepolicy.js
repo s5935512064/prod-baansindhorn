@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Cookiepolicy = () => {
     return (
-        <AnimatePresence>
+        <>
             <Layout>
                 <Head>
                     <title>Baan Sindhorn</title>
@@ -288,7 +288,7 @@ const Cookiepolicy = () => {
 
                 </div>
             </Layout>
-        </AnimatePresence>
+        </>
     );
 }
 

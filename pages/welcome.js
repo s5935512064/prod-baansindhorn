@@ -11,7 +11,7 @@ function classNames(...classes) {
 
 const welcome = () => {
     return (
-        <AnimatePresence>
+        <>
 
             <Head>
                 <title>๓ มิถุนายน ๒๕๖๗ เนื่องในโอกาสวันเฉลิมพระชนมพรรษา สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษณ พระบรมราชินี</title>
@@ -93,7 +93,7 @@ const welcome = () => {
                     </Link>
                 </div>
             </div>
-        </AnimatePresence>
+        </>
     );
 }
 

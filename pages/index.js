@@ -54,7 +54,7 @@ export default function Home() {
   }, [])
 
   return (
-    <AnimatePresence>
+    <>
       <Layout>
         <Head>
           <title>Baan Sindhorn</title>
@@ -284,7 +284,7 @@ export default function Home() {
           }
         </div >
       </Layout>
-    </AnimatePresence>
+    </>
 
   )
 }

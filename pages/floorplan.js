@@ -699,7 +699,7 @@ const Floorplan = () => {
     }
 
     return (
-        <AnimatePresence>
+        <>
             <Layout>
                 <Head>
                     <title>Baan Sindhorn</title>
@@ -729,7 +729,7 @@ const Floorplan = () => {
                     }
                 </div>
             </Layout>
-        </AnimatePresence>
+        </>
     );
 }
 

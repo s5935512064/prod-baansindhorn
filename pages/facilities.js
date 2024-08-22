@@ -262,7 +262,7 @@ const Facilities = () => {
 
 
     return (
-        <AnimatePresence>
+        <>
             <Layout>
                 <Head>
                     <title>Baan Sindhorn</title>
@@ -289,7 +289,7 @@ const Facilities = () => {
                     }
                 </div>
             </Layout>
-        </AnimatePresence>
+        </>
     );
 }
 

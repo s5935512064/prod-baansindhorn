@@ -28,9 +28,7 @@ const Success = () => {
 
 
     useEffect(() => {
-
-        console.log(fromQR)
-
+        chckFromQr()
         async function chckFromQr() {
             if (query.QrCode != undefined) {
                 setFromQR(true)
@@ -39,7 +37,7 @@ const Success = () => {
             }
         }
 
-        chckFromQr()
+
 
     })
 
@@ -50,9 +48,8 @@ const Success = () => {
     // }, [])
 
     return (
-        <AnimatePresence>
+        <>
             <Layout>
-
                 <Head>
                     <title>Baan Sindhorn</title>
                     <meta name="description" content="Find 7 properties from 2 to 2 bed  units for Sale &amp; Rent available at Baan Sindhorn, Pathum Wan,  Bangkok" />
@@ -100,7 +97,7 @@ const Success = () => {
                 </div>
             </Layout>
 
-        </AnimatePresence>
+        </>
     );
 }
 

@@ -97,7 +97,7 @@ const Index = () => {
 
 
     return (
-        <AnimatePresence>
+        <>
             <>
 
                 <Head>
@@ -240,7 +240,7 @@ const Index = () => {
                 </div>
             </>
 
-        </AnimatePresence>
+        </>
     );
 }
 

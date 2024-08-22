@@ -198,7 +198,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-
       <AnimatePresence
         mode="wait"
         initial={false}
@@ -207,7 +206,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
 
       </AnimatePresence>
-      <Cookies99 />
+      {/* <Cookies99 /> */}
     </>
 
   );
